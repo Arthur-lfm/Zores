@@ -1,2 +1,6 @@
+# Binaries
+bin
+obj
 
+# Mac
 .DS_Store
