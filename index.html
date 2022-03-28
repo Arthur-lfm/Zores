@@ -6,28 +6,41 @@
         <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
     </head>
     <body>
+        <nav class="navbar dark-mode" role="navigation">
+            <div class="navbar__logo">
+                <img src="logo.png" class="logo0">
+            </div>    
+            <ul class="navbar__links">
+                <li class="navbar__link first"><a href="#box">Histoire</a></li>
+                <li class="navbar__link second"><a href="#box4">Demo</a></li>
+                <li class="navbar__link third"><a href="#box10">Download</a></li>
+            </ul>   
+            <button class="burger">
+            <span class="bar"></span>  
+            </button>   
+        </nav>
         <section>
             <h2>Zorestone Realm</h2>
         </section>
-        <div class="box">
+        <div class="box" id="box">
             <h2 class="text1">Le groupe PiCaSaAr vous presente</h2>
             <h2 class="text2">Une incroyable histoire</h2>
             <h2 class="text3">La voici :</h2>
             <img src="logo.png" class="logo">
         </div>
-        <div class="box2">
+        <div class="box2" id="box2">
             <div class="box2-2">
                 <h2 class="text4">Lors d'une nuit sombre</h2>
                 <h2 class="text5">Un mechant personnage detruisit le royaume</h2>
                 <h2 class= "text6">Pour voler la pierre de Zores</h2>
             </div>
         </div>
-        <div class="box3">
+        <div class="box3" id="box3">
             <h2 class="text7">Quelques habitants survecurent</h2>
             <h2 class="text8">Parmis eux, 4 heros aux destin lie</h2>
             <h2 class= "text9">les voicis :</h2>
         </div>
-        <div class="box4">
+        <div class="box4" id="box4">
             <div class="img">
                 <img src="img1.png" class="img1">
                 <img src="img2.png" class="img2">
@@ -35,7 +48,11 @@
                 <img src="img4.png" class="img4">
             </div>
         </div>
-        <div class="box5">
+        <div class="box5" id="box5">
+
+
+        </div>
+        <div class="box10" id="box10">
             <h2 class="text10">Download</h2>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
@@ -108,7 +125,7 @@
 
             gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".box5",
+                    trigger: ".box10",
                     start: "center center",
                     end: "bottom top",
                     markers: false,
@@ -116,7 +133,7 @@
                     pin:true
                 }
             })
-            .from(".box5", {opacity:0})
+            .from(".box10", {opacity:0})
             .from(".text10", {y:innerHeight * 1})
         </script>
     </body>
