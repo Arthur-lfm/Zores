@@ -8,12 +8,12 @@
     <body>
         <nav class="navbar dark-mode" role="navigation">
             <div class="navbar__logo">
-                <img src="logo.png" class="logo0">
-            </div>    
+                <img src="logo.png" class="logo0" onclick="topo()">
+            </div>
             <ul class="navbar__links">
-                <li class="navbar__link first"><a href="#box">Histoire</a></li>
-                <li class="navbar__link second"><a href="#box4">Demo</a></li>
-                <li class="navbar__link third"><a href="#box10">Download</a></li>
+                <li class="navbar__link first"><a onclick="hist()">Histoire</a></li>
+                <li class="navbar__link second"><a onclick="demo()">Demo</a></li>
+                <li class="navbar__link third"><a onclick="down()">Download</a></li>
             </ul>   
             <button class="burger">
             <span class="bar"></span>  
@@ -37,8 +37,8 @@
         </div>
         <div class="box3" id="box3">
             <h2 class="text7">Quelques habitants survecurent</h2>
-            <h2 class="text8">Parmis eux, 4 heros aux destin lie</h2>
-            <h2 class= "text9">les voicis :</h2>
+            <h2 class="text8">Parmis eux, 4 heros au destin lie</h2>
+            <h2 class= "text9">Les voicis :</h2>
         </div>
         <div class="box4" id="box4">
             <div class="img">
@@ -49,11 +49,16 @@
             </div>
         </div>
         <div class="box5" id="box5">
-
-
+            <div class="img">
+                <img src="Divers-mac.png" class="imgmac">
+                <img src="Divers-charselection.png" class="imgselect">
+                <img src="Divers-mac.png" class="imgmac2">
+                <img src="Divers-charselection.png" class="imgselect2">
+            </div>
         </div>
         <div class="box10" id="box10">
             <h2 class="text10">Download</h2>
+            <img src="img7.png" class="download">
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
@@ -68,9 +73,9 @@
                     pin: true
                 }
             })
-            .from(".text1", {x:innerWidth * 1})
-            .from(".text2", {x:innerWidth * -1})
-            .from(".text3", {x:innerWidth * 1})
+            .from(".text1", {opacity : 0})
+            .from(".text2", {opacity : 0})
+            .from(".text3", {opacity : 0})
             .from(".logo", {
                 y:innerHeight * 1,
                 rotate:360
@@ -124,6 +129,29 @@
                 .from(".img4", {x: innerWidth * 1})
 
             gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".box5",
+                        start: "top 50%-=260px",
+                        end: "bottom top",
+                        scrub: true,
+                        markers: false,
+                        pin: true
+                    }
+                })
+            .from(".imgselect", {opacity : 0})
+            .to(".imgmac",{scale:1.5})
+            .to(".imgselect",{scale:1.5},"<")
+            .to(".imgmac", {opacity : 0})
+            .to(".imgmac", {opacity : 0})
+            .to(".imgmac", {opacity : 0})
+            .to(".imgmac", {opacity : 1})
+
+            .to(".imgmac",{x:innerWidth * -0.26, scale:0.6},"-=0.2")
+            .to(".imgselect",{x:innerWidth * -0.26, scale:0.6},"<")
+            .from(".imgmac2", {x:innerWidth * 2},"<")
+            .from(".imgselect2", {opacity : 0})
+
+            gsap.timeline({
                 scrollTrigger: {
                     trigger: ".box10",
                     start: "center center",
@@ -135,6 +163,20 @@
             })
             .from(".box10", {opacity:0})
             .from(".text10", {y:innerHeight * 1})
+            .from(".download", {y:innerHeight * 1},"-=0.3")
+
+            function topo() {
+                window.scrollTo(0, 0);
+            }
+            function hist() {
+                window.scrollTo(0, 2830);
+            }
+            function demo() {
+                window.scrollTo(0, 7067);
+            }
+            function down() {
+                window.scrollTo(0, 10000);
+            }
         </script>
     </body>
 </html>
