@@ -109,6 +109,13 @@ section h2
 {
     max-width: 275px;
 }
+.img5, .img6, .img7, .img8
+{
+  margin-top: 20%;
+  margin-left: 8%;
+  margin-right: 5%;
+  width: 100px;
+}
 
 .box5
 {
@@ -116,6 +123,14 @@ section h2
     width: 100%;
     min-height: 100vh;
     padding-left: 16.5%;
+    background:#000;
+}
+.box6
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 100px;
     background:#000;
 }
 .imgmac

@@ -48,12 +48,20 @@
                 <img src="img4.png" class="img4">
             </div>
         </div>
+        <div class="box6" id="box6">
+            <div class="img">
+                <img src="archer.gif" class="img5">
+                <img src="assassin.gif" class="img6">
+                <img src="guerriere.gif" class="img7">
+                <img src="mage.gif" class="img8">
+            </div>
+        </div>
         <div class="box5" id="box5">
             <div class="img">
                 <img src="Divers-mac.png" class="imgmac">
-                <img src="Divers-charselection.png" class="imgselect">
+                <img src="demo.gif" class="imgselect">
                 <img src="Divers-mac.png" class="imgmac2">
-                <img src="Divers-charselection.png" class="imgselect2">
+                <img src="demo2.gif" class="imgselect2">
             </div>
         </div>
         <div class="box10" id="box10">
@@ -127,6 +135,21 @@
                 .from(".img2", {x: innerWidth * 1})
                 .from(".img3", {x: innerWidth * 1})
                 .from(".img4", {x: innerWidth * 1})
+
+            gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".box6",
+                        start: "center center",
+                        end: "bottom top",
+                        scrub: true,
+                        markers: false,
+                        pin: true
+                    }
+                })
+                .from(".img8", {x: innerWidth * -1})
+                .from(".img7", {x: innerWidth * -1})
+                .from(".img6", {x: innerWidth * -1})
+                .from(".img5", {x: innerWidth * -1})
 
             gsap.timeline({
                     scrollTrigger: {
