@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title>Zorestone Realm</title>
         <link rel="stylesheet"ctype="text/css" href="style.css">
         <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
@@ -12,8 +13,8 @@
             </div>
             <ul class="navbar__links">
                 <li class="navbar__link first"><a onclick="hist()">Histoire</a></li>
-                <li class="navbar__link second"><a onclick="demo()">Demo</a></li>
-                <li class="navbar__link third"><a onclick="down()">Download</a></li>
+                <li class="navbar__link second"><a onclick="demo()">Démo</a></li>
+                <li class="navbar__link third"><a onclick="down()">Téléchargement</a></li>
             </ul>   
             <button class="burger">
             <span class="bar"></span>  
@@ -23,7 +24,7 @@
             <h2>Zorestone Realm</h2>
         </section>
         <div class="box" id="box">
-            <h2 class="text1">Le groupe PiCaSaAr vous presente</h2>
+            <h2 class="text1">Le groupe PiCaSaAr vous présente</h2>
             <h2 class="text2">Une incroyable histoire</h2>
             <h2 class="text3">La voici :</h2>
             <img src="logo.png" class="logo">
@@ -31,13 +32,13 @@
         <div class="box2" id="box2">
             <div class="box2-2">
                 <h2 class="text4">Lors d'une nuit sombre</h2>
-                <h2 class="text5">Un mechant personnage detruisit le royaume</h2>
+                <h2 class="text5">Un méchant personnage detruisit le royaume</h2>
                 <h2 class= "text6">Pour voler la pierre de Zores</h2>
             </div>
         </div>
         <div class="box3" id="box3">
-            <h2 class="text7">Quelques habitants survecurent</h2>
-            <h2 class="text8">Parmis eux, 4 heros au destin lie</h2>
+            <h2 class="text7">Quelques habitants survécurent</h2>
+            <h2 class="text8">Parmis eux, 4 héros au destin lié</h2>
             <h2 class= "text9">Les voicis :</h2>
         </div>
         <div class="box4" id="box4">
@@ -65,7 +66,7 @@
             </div>
         </div>
         <div class="box10" id="box10">
-            <h2 class="text10">Download</h2>
+            <h2 class="text10">Téléchargement</h2>
             <img src="img7.png" class="download">
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
@@ -131,10 +132,10 @@
                         pin: true
                     }
                 })
-                .from(".img1", {x: innerWidth * 1})
-                .from(".img2", {x: innerWidth * 1})
-                .from(".img3", {x: innerWidth * 1})
-                .from(".img4", {x: innerWidth * 1})
+                .from(".img4", {x: innerWidth * -1})
+                .from(".img3", {x: innerWidth * -1})
+                .from(".img2", {x: innerWidth * -1})
+                .from(".img1", {x: innerWidth * -1})
 
             gsap.timeline({
                     scrollTrigger: {
@@ -154,7 +155,7 @@
             gsap.timeline({
                     scrollTrigger: {
                         trigger: ".box5",
-                        start: "top 50%-=260px",
+                        start: "top",
                         end: "bottom top",
                         scrub: true,
                         markers: false,
@@ -162,16 +163,18 @@
                     }
                 })
             .from(".imgselect", {opacity : 0})
-            .to(".imgmac",{scale:1.5})
-            .to(".imgselect",{scale:1.5},"<")
+            .from(".imgmac",{scale:0.5})
+            .from(".imgselect",{scale:0.5},"<")
+            .to(".navbar", {opacity : 0.2},"<")
             .to(".imgmac", {opacity : 0})
             .to(".imgmac", {opacity : 0})
             .to(".imgmac", {opacity : 0})
             .to(".imgmac", {opacity : 1})
+            .to(".navbar", {opacity : 1},"<")
 
-            .to(".imgmac",{x:innerWidth * -0.26, scale:0.6},"-=0.2")
-            .to(".imgselect",{x:innerWidth * -0.26, scale:0.6},"<")
-            .from(".imgmac2", {x:innerWidth * 2},"<")
+            .to(".imgmac",{x:innerWidth * -0.25, scale:0.3},"-=0.2")
+            .to(".imgselect",{x:innerWidth * -0.25,y:innerHeight * 0.01, scale:0.3},"<")
+            .from(".imgmac2", {y:innerHeight * 3},"<")
             .from(".imgselect2", {opacity : 0})
 
             gsap.timeline({
