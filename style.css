@@ -28,16 +28,31 @@ body
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
+
+.navbar__links {
+  cursor: default;
+}
+.logo0:hover{
+  width : 105px;
+}
+.first:hover, .second:hover, .third:hover{
+  font-weight: bold;
+}
 .logo0
 {
   padding: 20px;
-  max-width:100px;
+  width:100px;
 }
 section h2
 {
   font-size: 6em;
   color: #fff;
   font-weight:500;
+}
+.fondEcran
+{
+  width: 100vw;
+  height: 100vh;
 }
 .box
 {
@@ -170,6 +185,14 @@ section h2
   height: 30vh;
   background: rgba(0, 0, 0, 0);
 }
+.box5 h2
+{
+  position:absolute;
+  top: 15vh;
+  left: 30vw;
+  font-size: 3.5vw;
+  color: #fff;
+}
 
 .box10
 {
@@ -192,6 +215,10 @@ section h2
     width: 20%;
     background: rgba(0, 0, 0, 0);
 }
+.download:hover
+{
+    width: 21%;
+}
 
 /* Variables */
 :root {
@@ -203,7 +230,7 @@ section h2
 }
 .dark-mode {
   --navbar-color: #FFF;
-  --navbar-bg-color: rgba(0, 0, 0, 0.95);
+  --navbar-bg-color: rgba(0, 0, 0, 0.842);
 }
 
 /* Reset */

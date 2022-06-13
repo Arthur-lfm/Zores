@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <meta charset="utf-8"/>
         <title>Zorestone Realm</title>
@@ -12,34 +12,34 @@
                 <img src="logo.png" class="logo0" onclick="topo()">
             </div>
             <ul class="navbar__links">
-                <li class="navbar__link first"><a onclick="hist()">Histoire</a></li>
+                <li class="navbar__link first"><a onclick="hist()">Story</a></li>
                 <li class="navbar__link second"><a onclick="demo()">Démo</a></li>
-                <li class="navbar__link third"><a onclick="down()">Téléchargement</a></li>
+                <li class="navbar__link third"><a onclick="down()">Download</a></li>
             </ul>   
             <button class="burger">
             <span class="bar"></span>  
             </button>   
         </nav>
         <section>
-            <h2>Zorestone Realm</h2>
+            <img src="fond_decran.png" class="fondEcran">
         </section>
         <div class="box" id="box">
-            <h2 class="text1">Le groupe PiCaSaAr vous présente</h2>
-            <h2 class="text2">Une incroyable histoire</h2>
-            <h2 class="text3">La voici :</h2>
+            <h2 class="text1">The PiCaSaAr group presents</h2>
+            <h2 class="text2">An incredible story</h2>
+            <h2 class="text3">Here it is :</h2>
             <img src="logo.png" class="logo">
         </div>
         <div class="box2" id="box2">
             <div class="box2-2">
-                <h2 class="text4">Lors d'une nuit sombre</h2>
-                <h2 class="text5">Un méchant personnage detruisit le royaume</h2>
-                <h2 class= "text6">Pour voler la pierre de Zores</h2>
+                <h2 class="text4">On a dark night</h2>
+                <h2 class="text5">An evil character destroyed the kingdom</h2>
+                <h2 class= "text6">To steal the stone of Zores</h2>
             </div>
         </div>
         <div class="box3" id="box3">
-            <h2 class="text7">Quelques habitants survécurent</h2>
-            <h2 class="text8">Parmis eux, 4 héros au destin lié</h2>
-            <h2 class= "text9">Les voicis :</h2>
+            <h2 class="text7">Some inhabitants survived</h2>
+            <h2 class="text8">Among them, 4 heroes with linked destinies</h2>
+            <h2 class= "text9">Here they are :</h2>
         </div>
         <div class="box4" id="box4">
             <div class="img">
@@ -58,6 +58,7 @@
             </div>
         </div>
         <div class="box5" id="box5">
+            <h2 class="text11">Play with your friends</h2>
             <div class="img">
                 <img src="Divers-mac.png" class="imgmac">
                 <img src="demo.gif" class="imgselect">
@@ -66,7 +67,7 @@
             </div>
         </div>
         <div class="box10" id="box10">
-            <h2 class="text10">Téléchargement</h2>
+            <h2 class="text10">Download</h2>
             <img src="img7.png" class="download">
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
@@ -174,8 +175,9 @@
 
             .to(".imgmac",{x:innerWidth * -0.25, scale:0.3},"-=0.2")
             .to(".imgselect",{x:innerWidth * -0.25,y:innerHeight * 0.01, scale:0.3},"<")
-            .from(".imgmac2", {y:innerHeight * 3},"<")
+            .from(".imgmac2", {opacity : 0})
             .from(".imgselect2", {opacity : 0})
+            .from(".text11", {opacity : 0},"<")
 
             gsap.timeline({
                 scrollTrigger: {
@@ -195,10 +197,10 @@
                 window.scrollTo(0, 0);
             }
             function hist() {
-                window.scrollTo(0, 2910);
+                window.scrollTo(0, 3450);
             }
             function demo() {
-                window.scrollTo(0, 8920);
+                window.scrollTo(0, 9455);
             }
             function down() {
                 window.scrollTo(0, 120000);
