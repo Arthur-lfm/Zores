@@ -209,15 +209,36 @@ section h2
     color: #000;
     background:#fff;
 }
+a
+{
+  background: rgba(0, 0, 0, 0);
+}
 .download
 {
     padding-top: 10%;
-    width: 20%;
+    width: 20vw;
+    background: rgba(0, 0, 0, 0);
+    margin-right: 10vw;
+}
+.rapport
+{
+    padding-top: 10%;
+    width: 20vw;
     background: rgba(0, 0, 0, 0);
 }
-.download:hover
+.text12
 {
-    width: 21%;
+  position: absolute;
+  left: 28vw;
+}
+.text13
+{
+  position: absolute;
+  right:24vw;
+}
+.download:hover, .rapport:hover
+{
+    width: 21vw;
 }
 
 /* Variables */

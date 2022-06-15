@@ -13,7 +13,7 @@
             </div>
             <ul class="navbar__links">
                 <li class="navbar__link first"><a onclick="hist()">Story</a></li>
-                <li class="navbar__link second"><a onclick="demo()">Démo</a></li>
+                <li class="navbar__link second"><a onclick="demo()">Demo</a></li>
                 <li class="navbar__link third"><a onclick="down()">Download</a></li>
             </ul>   
             <button class="burger">
@@ -68,7 +68,14 @@
         </div>
         <div class="box10" id="box10">
             <h2 class="text10">Download</h2>
-            <img src="img7.png" class="download">
+            <a href="ZorestoneRealminstall.exe" download >
+                <img src="img7.png" class="download">
+                <h2 class="text12">Game</h2>
+            </a>
+            <a href="Rapport de soutenance finale.pdf" download >
+                <img src="Rapport.png" class="rapport">
+                <h2 class="text13">Reporting</h2>
+            </a>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
@@ -192,6 +199,9 @@
             .from(".box10", {opacity:0})
             .from(".text10", {y:innerHeight * 1})
             .from(".download", {y:innerHeight * 1},"-=0.3")
+            .from(".rapport", {y:innerHeight * 1},"<")
+            .from(".text12", {opacity : 0})
+            .from(".text13", {opacity : 0},"<")
 
             function topo() {
                 window.scrollTo(0, 0);
